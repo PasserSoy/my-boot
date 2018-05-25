@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人简历</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+
+        body {
+            padding-top: 50px;
+            padding-bottom: 40px;
+            color: #5a5a5a;
+        }
+
+        /* 轮播 */
+
+        .carousel {
+            height: 500px;
+            margin-bottom: 60px;
+        }
+
+        .carousel .item {
+            height: 500px;
+            background-color: #000;
+        }
+
+        .carousel .item img {
+            width: 100%;
+        }
+
+        .carousel-caption {
+            z-index: 10;
+        }
+
+        .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+		#ad-carousel .carousel-inner {
+			border-bottom: 2px solid #616161;
+		}
+		#ad-carousel .carousel-caption {
+			color: #000;
+		}
+        /* 简介 */
+
+        .summary {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .summary .col-md-4 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* 特性 */
+
+        .feature-divider {
+            margin: 40px 0;
+        }
+
+        .feature {
+            padding: 30px 0;
+        }
+
+        .feature-heading {
+            font-size: 50px;
+            color: #2a6496;
+        }
+
+        .feature-heading .text-muted {
+            font-size: 28px;
+        }
+
+        /* 响应式布局 */
+
+        @media (max-width: 768px) {
+
+            .summary {
+                padding-right: 3px;
+                padding-left: 3px;
+            }
+
+            .carousel {
+                height: 300px;
+                margin-bottom: 30px;
+            }
+
+            .carousel .item {
+                height: 300px;
+            }
+
+            .carousel img {
+                min-height: 300px;
+            }
+
+            .carousel-caption p {
+                font-size: 16px;
+                line-height: 1.4;
+            }
+
+            .feature-heading {
+                font-size: 34px;
+            }
+
+            .feature-heading .text-muted {
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .feature-heading {
+                margin-top: 120px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+<!-- 顶部导航 -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">个人简历</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#ad-carousel">首页</a></li>
+                <li><a href="#summary-container">项目</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">技能 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#feature-tab" data-tab="tab-chrome">web</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-firefox">html5</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-safari">CSS3</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-opera">Bootstrap</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-ie">jQuery</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-toggle="modal" data-target="#about-modal">关于</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- 轮播 -->
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+        <li data-target="#ad-carousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="images/pic/1.png" alt="1 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>盐田项目</h1>
+
+                    <p>MapGis项目，负责前端页面编写，交互效果制作。</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="new.html" role="button" target="_blank">点我跳转</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/pic/2.png" alt="2 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>龙岭触屏系统项目</h1>
+
+                    <p>MapGis项目，负责前端页面编写，交互效果制作。</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="new.html" role="button" target="_blank">点我跳转</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/pic/3.png" alt="3 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>龙岗产业项目</h1>
+
+                    <p>MapGis项目，负责前端页面编写，交互效果制作。</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="new.html" role="button" target="_blank">点我跳转</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/pic/4.png" alt="4 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>龙岗信息采集项目</h1>
+
+                    <p>MapGis项目，负责前端页面编写，交互效果制作。</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="new.html" role="button" target="_blank">点我跳转</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/pic/5.png" alt="5 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>龙岗指挥平台项目</h1>
+
+                    <p>MapGis项目，负责前端页面编写，交互效果制作。</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="new.html" role="button" target="_blank">点我跳转</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+
+<!-- 主要内容 -->
+<div class="container summary">
+
+    <!-- 简介 -->
+    <div class="row" id="summary-container">
+        <div class="col-md-4">
+            <img class="img-circle" src="images/pic/grey_apple_fruit_128px_559221_easyicon.net.png" alt="chrome">
+
+            <h2>盐田项目</h2>
+
+            <p>MapGis项目，负责前端页面编写，交互效果制作。</p>
+
+            <p><a class="btn btn-default" href="#" role="button">点我跳转</a></p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="images/pic/orange_129.82383419689px_1209052_easyicon.net.png" alt="firefox">
+
+            <h2>龙岭触屏系统项目</h2>
+
+            <p>MapGis项目，负责前端页面编写，交互效果制作。</p>
+
+            <p><a class="btn btn-default" href="#" role="button">点我跳转</a></p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="images/pic/Mango_Fruit_128px_510063_easyicon.net.png" alt="safari">
+
+            <h2>龙岗指挥平台项目</h2>
+
+            <p>MapGis项目，负责前端页面编写，交互效果制作。</p>
+
+            <p><a class="btn btn-default" href="#" role="button">点我跳转</a></p>
+        </div>
+    </div>
+
+    <!-- 特性 -->
+
+    <hr class="feature-divider">
+
+    <ul class="nav nav-tabs" role="tablist" id="feature-tab">
+        <li class="active"><a href="#tab-chrome" role="tab" data-toggle="tab">web</a></li>
+        <li><a href="#tab-firefox" role="tab" data-toggle="tab">html5</a></li>
+        <li><a href="#tab-safari" role="tab" data-toggle="tab">CSS3</a></li>
+        <li><a href="#tab-opera" role="tab" data-toggle="tab">Bootstrap</a></li>
+        <li><a href="#tab-ie" role="tab" data-toggle="tab">jQuery</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab-chrome">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">web前端 <span
+                            class="text-muted">web简介</span></h2>
+
+                    <p class="lead">Web前端开发工程师是一个很新的职业，是从事Web前端开发工作的工程师。主要进行网站开发，优化，完善的工作。网页制作是Web 1.0时代的产物，那时网站的主要内容都是静态的，用户使用网站的行为也以浏览为主。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/pic/e850352ac65c103843f7bc6eb8119313b17e8994.jpg"
+                         alt="Chrome">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-firefox">
+            <div class="row feature">
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/pic/728da9773912b31b7096bff48418367adbb4e171.jpg"
+                         alt="Firefox">
+                </div>
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">html5 <span class="text-muted">html5简介</span>
+                    </h2>
+
+                    <p class="lead">万维网的核心语言、标准通用标记语言下的一个应用超文本标记语言（HTML）的第五次重大修改。</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-safari">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">CSS3 <span class="text-muted">CSS3 简介</span></h2>
+
+                    <p class="lead">CSS即层叠样式表（Cascading StyleSheet）。 在网页制作时采用层叠样式表技术，可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确的控制。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/pic/css3.jpg"
+                         alt="Safari">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-opera">
+            <div class="row feature">
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/pic/boot.jpg"
+                         alt="Opera">
+                </div>
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">Bootstrap <span class="text-muted">Bootstrap 简介</span>
+                    </h2>
+
+                    <p class="lead">Bootstrap，来自 Twitter，是目前很受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-ie">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">jQuery <span class="text-muted">jQuery 简介</span></h2>
+
+                    <p class="lead">jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/pic/jq.jpg"
+                         alt="IE">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 关于 -->
+    <div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title" id="modal-label">关于</h4>
+                </div>
+                <div class="modal-body">
+                    <p>随着互联网的迅猛发展和普及，一个新型的行业和新兴的职位正在上升到技术的层面：web前端开发工程师
+Web前端开发工程师，除了主要职责外，还要为网站上提供的产品和服务实现一流的Web界面，优化代码并保持良好兼容性</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p class="pull-right"><a href="#top"><img src="images/pic/top.png" alt=""></a></p>
+
+        <p>&copy; XXXXXX公司XXX号 </p>
+    </footer>
+
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('#ad-carousel').carousel();
+        $('#menu-nav .navbar-collapse a').click(function (e) {
+            var href = $(this).attr('href');
+            var tabId = $(this).attr('data-tab');
+            if ('#' !== href) {
+                e.preventDefault();
+                $(document).scrollTop($(href).offset().top - 70);
+                if (tabId) {
+                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
